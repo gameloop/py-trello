@@ -515,7 +515,7 @@ class Card(object):
         if fields is None:
             fields = ["name", "desc", "closed", "labels", "idMembers", "idAttachmentCover", "idList", "idBoard", "due"]
 
-        json = {field: getattr(self, field) for field in fields if hasattr(self, field) and getattr(self, field)}
+        json = {field: getattr(self, field) for field in fields if hasattr(self, field)}
 
         if self.id:
             # save changes to the existing card
